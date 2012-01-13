@@ -37,7 +37,7 @@ describe "LayoutLinks" do
     click_link "Home"
     response.should have_selector('title', :content => "Home")
     click_link "Sign up now!"
-    response.should have_selector('title', :content => "Sign up")	
+    response.should have_selector('title', :content => "Sign up")     	
   end  
   
   describe "when not signed in" do
@@ -68,9 +68,10 @@ describe "LayoutLinks" do
 	  visit root_path
       response.should have_selector("a", :href => user_path(@user),
                                          :content => "Profile")
-    end
+    end	
   end 
 end
+
 
 
   
